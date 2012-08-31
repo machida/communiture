@@ -19,7 +19,15 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  database: communiture_production
   pool: 5
-  timeout: 5000
+  username: deployer
+  password: miyauchi
+  host: localhost
+  reconnect: true
+  socket: <%= ['/tmp/mysqld.sock',
+               '/tmp/mysql.sock',
+               '/var/run/mysqld/mysqld.sock',
+               '/var/lib/mysql/mysql.sock'].detect{|socket| File.exist?(socket) } %>
