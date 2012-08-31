@@ -39,6 +39,12 @@ gem 'jquery-rails'
 # Use unicorn as the app server
 gem 'unicorn'
 
+group :production do
+  gem 'mysql2'
+  gem 'execjs'
+  gem 'therubyracer'
+end
+
 # Deploy with Capistrano
 # gem 'capistrano'
 
