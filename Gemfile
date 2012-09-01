@@ -26,6 +26,9 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'sassy-buttons'
+  gem 'bootstrap-sass', '~> 2.0.4.1'
+  gem 'font-awesome-sass-rails'
 end
 
 gem 'jquery-rails'
