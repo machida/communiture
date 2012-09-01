@@ -6,26 +6,37 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %header
-      %h1#logo= link_to 'Communiture', root_path
-    %nav
-      %ul
-        %li= link_to '募集', '/offer'
-    #wrapper
-      = yield
-    #footer
-      .support
-        %h3 サポート
-        %ul
-          %li= link_to '応募までの流れ', '/help/how_to_register' 
-          %li= link_to 'よくある質問', '/faq' 
-          %li= link_to '募集のまでの流れ', '/help/how_to_offer' 
-          %li= link_to '料金体系', '/pricing' 
-      .about_communiture
-        %h3 Communitureについて
-        %ul
-          %li= link_to '開発チーム', '' 
-          %li= link_to 'Facebook', '' 
-          %li= link_to 'Twitter', '' 
-          %li= link_to 'ブログ', '' 
-
+    .container
+      %header.page-header
+        %h1= link_to 'Communiture', root_path
+      %nav.bs-docs-example
+        .navbar
+          .navbar-inner
+            %a.brand{:href => "#"} Communiture
+            %ul.nav
+              %li
+                = link_to '募集', '/offer'
+              %li.active
+                %a{:href => "#"} Home
+              %li
+                %a{:href => "#"} Link
+              %li
+                %a{:href => "#"} Link
+      #wrapper
+        = yield
+    %footer.footer
+      .container.row
+        .support.span3
+          %h3 サポート
+          %ul
+            %li= link_to '応募までの流れ', '/help/how_to_register' 
+            %li= link_to 'よくある質問', '/faq' 
+            %li= link_to '募集のまでの流れ', '/help/how_to_offer' 
+            %li= link_to '料金体系', '/pricing' 
+        .about_communiture.span3
+          %h3 Communitureについて
+          %ul
+            %li= link_to '開発チーム', '' 
+            %li= link_to 'Facebook', '' 
+            %li= link_to 'Twitter', '' 
+            %li= link_to 'ブログ', '' 
