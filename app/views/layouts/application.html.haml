@@ -7,12 +7,12 @@
     = csrf_meta_tags
   %body
     .container
-      %header.page-header
+      %header.page-header#header
         %h1= link_to 'Communiture', root_path
       %nav.bs-docs-example
         .navbar
           .navbar-inner
-            %a.brand{:href => "#"} Communiture
+            = link_to 'Communiture', root_path,{:class => "brand"}
             %ul.nav
               %li
                 = link_to '募集', '/offer'
