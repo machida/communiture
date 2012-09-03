@@ -3,7 +3,7 @@
     %h1 起業する前にためそう！
     %p 起業したい人のための職業体験・インターンシップが探せます
     %p
-      = image_tag 'http://www.pakutaso.com/assets_c/2012/08/N112_genkansakideodemukae500-thumb-632x500-1969.jpg', width: '940'
+      = image_tag 'okami.jpg', width: '940'
     
 #experience
   .row-fluid
@@ -14,7 +14,7 @@
       - @experiences.each do |experience|
         %li.experience.span4
           .thumbnail
-            .photo= image_tag 'http://www.pakutaso.com/assets_c/2012/08/N112_sukejyurucyouseicyu500-thumb-750x500-1959.jpg', width: '300'
+            .photo= image_tag 'suit.jpg', width: '300'
             .caption
               .title= link_to experience.title, experience
               .description= experience.description
