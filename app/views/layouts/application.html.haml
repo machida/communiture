@@ -6,11 +6,20 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    #fb-root
+    :javascript
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));  
     %header.page-header#header
       .inner
         .title
           %h1= link_to 'Communiture', root_path
-          %p 起業の前にまず修業
+          %p 起業の前にまず修業 9月末オープン予定!
         %nav
           .navbar
             .navbar-inner
@@ -23,22 +32,25 @@
                   %a{:href => "#"} 料金体系
                 %li
                   %a{:href => "#"} Communitureとは
-  .container
-    #wrapper
-      = yield
-  %footer.footer
-    .container.row
-      .support.span3
-        %h3 サポート
-        %ul
-          %li= link_to '応募までの流れ', '/help/how_to_register' 
-          %li= link_to 'よくある質問', '/faq' 
-          %li= link_to '募集のまでの流れ', '/help/how_to_offer' 
-          %li= link_to '料金体系', '/pricing' 
-      .about_communiture.span3
-        %h3 Communitureについて
-        %ul
-          %li= link_to '開発チーム', '' 
-          %li= link_to 'Facebook', '' 
-          %li= link_to 'Twitter', '' 
-          %li= link_to 'ブログ', '' 
+    .container
+      #wrapper
+        = yield
+    %footer.footer
+      .container.row
+        .support.span3
+          %h3 サポート
+          %ul
+            %li= link_to '応募までの流れ', '/help/how_to_register' 
+            %li= link_to 'よくある質問', '/faq' 
+            %li= link_to '募集のまでの流れ', '/help/how_to_offer' 
+            %li= link_to '料金体系', '/pricing' 
+        .about_communiture.span3
+          %h3 Communitureについて
+          %ul
+            %li= link_to '開発チーム', '' 
+            %li= link_to 'Facebook', '' 
+            %li= link_to 'Twitter', '' 
+            %li= link_to 'ブログ', ''
+        .fb-like-box{"data-colorscheme" => "dark", "data-height" => "200", "data-header" => "true", "data-href" => "https://www.facebook.com/communiture", "data-show-faces" => "true", "data-stream" => "false", "data-width" => "350"}
+
+
