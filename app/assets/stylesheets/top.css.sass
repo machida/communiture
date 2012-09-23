@@ -21,7 +21,7 @@ body
     margin:  0 auto
     .title
       float: left
-      padding-right: 40px
+      padding-right: 60px
       border-right: dotted 1px #ddd
       h1
         line-height: 1.3
@@ -74,14 +74,30 @@ body
       overflow: hidden
       background: $black
       color: $white
-      margin: 20px 30px 40px
+      margin: 20px 0 30px
       border-radius: 4px
       h1
         font:
-          size: 30px
+          size: 70px
         line-height: 1.5
-      img
-        float: left
+      p
+        font: 
+          size: 13px
+        margin-bottom: 3px
+      a
+        float: right
+        position: relative
+        top: 0px 
+        right: 7px
+        padding: 10px
+        font:
+          size: 17px
+      .images
+        margin-top: 20px
+        img
+          float: left
+          width: 280px
+          margin: 0 10px
     .experiences.row-fluid
       h2
       ul.thumbnails
@@ -123,6 +139,28 @@ body
                 .executive
                   margin-left: 10px 
                   float: left
+    .training
+      .row
+        margin: 0
+        .span8
+          margin: 0
+          .photo
+            float: left
+          .policy
+            float: left
+            width: 200px
+          ul.messages
+            clear: both
+            li.message
+              list-style: none
+              h2
+              p
+                line-height: 1.3
+                font:
+                  size: 14px
+
+
+
 .footer
   background-image : -webkit-linear-gradient(top, $black, $black)
   color: $white - 70
