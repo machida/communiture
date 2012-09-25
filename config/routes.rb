@@ -5,7 +5,7 @@ Communiture::Application.routes.draw do
 
   resources :experiences
   root :to => 'top#index'
-  
+  get 'flow' => 'top#flow', as: 'flow'
   get 'training/training1', :to => 'training#training1', :as => 'training1'
   get 'training/training2', :to => 'training#training2', :as => 'training2'
   get 'training/training3', :to => 'training#training3', :as => 'training3'
