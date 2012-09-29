@@ -2,10 +2,14 @@ Communiture::Application.routes.draw do
   get "help/how_to_offer"
   get "help/how_to_register"
   get "help/about_communiture"
+  get "help/rules"
+  get "help/privacy"
   
   resources :experiences
   root :to => 'top#index'
   get 'flow' => 'top#flow', as: 'flow'
+  get 'pricing' => 'top#pricing', as: 'pricing'
+  get 'contact' => 'top#contact', as: 'contact'
   get 'training/training1', :to => 'training#training1', :as => 'training1'
   get 'training/training2', :to => 'training#training2', :as => 'training2'
   get 'training/training3', :to => 'training#training3', :as => 'training3'
