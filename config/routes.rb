@@ -4,7 +4,7 @@ Communiture::Application.routes.draw do
   get "help/about_communiture"
   get "help/rules"
   get "help/privacy"
-  
+
   resources :experiences
   root :to => 'top#index'
   get 'flow' => 'top#flow', as: 'flow'
@@ -20,5 +20,5 @@ Communiture::Application.routes.draw do
   get 'training/training8', :to => 'training#training8', :as => 'training8'
   get 'training/training9', :to => 'training#training9', :as => 'training9'
   get 'training/training10', :to => 'training#training10', :as => 'training10'
-  
+
 end
