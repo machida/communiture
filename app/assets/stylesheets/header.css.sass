@@ -1,0 +1,64 @@
+@charset "UTF-8"
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script)
+@import colors
+
+#header
+  padding: 5px 0 10px
+  margin: 0 0 20px 0
+  background-image: -moz-linear-gradient(top, $white, $white - 20)
+  background-image: -webkit-linear-gradient(top, $white, $white - 20)
+  -webkit-box-shadow: 0 1px 7px rgba(0, 0, 0, .2)
+  -moz-box-shadow: 0 1px 7px rgba(0, 0, 0, .2)
+  box-shadow: 0 1px 7px rgba(0, 0, 0, .2)
+  .inner
+    overflow: hidden
+    width: 940px
+    margin:  0 auto
+    .title
+      float: left
+      margin-left: -5px
+      width: 230px
+      padding-right: 80px
+      h1
+        line-height: 1.3
+        a
+          padding: 25px 0
+          font: 
+            size: 40px
+            family: 'Kaushan Script', cursive
+          text:
+            decoration: none 
+            shadow: 0px 1px 1px #BBB 
+          color: $red
+      p
+        margin: 0
+        float: right
+    nav
+      float: right
+      overflow: hidden
+      margin: 20px 0 0
+      text-align: center
+      .navbar
+        margin: 0
+        .navbar-inner
+          background-image : none
+          background-color : transparent
+          padding: 0
+          box-shadow: none
+          ul.nav
+            margin: 0
+            li
+              margin-left: 14px
+            a
+              padding: 10px 0 20px 30px
+              font:
+                size: 16px
+              color: $black
+              text-shadow: none
+              &:link,
+              &:visited
+                color: $black
+                background: none
+              &:hover,
+              &:active
+                color: $red
