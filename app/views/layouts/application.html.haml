@@ -17,7 +17,6 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
   %body{:class => "#{view_slug}"}
-
     #fb-root
     :javascript
       (function(d, s, id) {
@@ -34,7 +33,7 @@
           %p 起業に挑戦する人に
         %nav
           .navbar
-            .navbar-inner
+            .inner
               %ul.nav
                 %li
                   = link_to '募集', '/offer'
